@@ -126,6 +126,7 @@ input[type="text"] {
 
 .first-name:focus-within {
   outline: 2px solid var(--third-clr);
+  border-radius: 10px;
 }
 
 .cta-account button {
