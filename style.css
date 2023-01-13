@@ -46,8 +46,10 @@ img {
 
   --ff-normal: "Poppins", sans-serif;
   --ff-titles: "Poppins", sans-serif;
+  --ff-size-logo: clamp(2.6rem, 0.4565rem + 8.4058vw, 5.5rem);
 
   --blocks-margin: 15px;
+  --margin-bottom: calc(4vmax + 75px);
 }
 
 body {
@@ -63,6 +65,7 @@ nav {
   background-color: var(--titles-clr);
   padding: 15px 25px;
   border-radius: 50px;
+  z-index: 2;
 }
 
 nav > ul {
@@ -77,26 +80,26 @@ nav > ul {
 header {
   margin: var(--blocks-margin);
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 header > h1 {
+  margin-top: 15px;
   font-family: var(--ff-titles);
   color: var(--titles-clr);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(2rem, 0.8913rem + 4.3478vw, 3.5rem);
 }
 
 header > h2 {
   font-family: var(--ff-titles);
   font-weight: 900;
-  font-size: 3.5rem;
+  font-size: var(--ff-size-logo);
 }
 
 header .fa-seedling {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font-size: 3rem;
   color: var(--titles-clr);
 }
 
@@ -156,11 +159,11 @@ header .fa-seedling {
 
 .analytics-landing-page {
   display: none;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   gap: 5vh;
   margin: var(--blocks-margin);
-  margin-bottom: 100px;
+  margin-bottom: var(--margin-bottom);
 }
 
 .form-start {
@@ -183,8 +186,9 @@ header .fa-seedling {
   border: none;
   background-color: var(--secondary-clr);
   font-size: 1.7rem;
-  padding: 10px 20px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
 }
 
 .form-start > button:hover {
@@ -228,7 +232,7 @@ header .fa-seedling {
   flex-direction: column;
   gap: 5vh;
   margin: var(--blocks-margin);
-  margin-bottom: 100px;
+  margin-bottom: var(--margin-bottom);
 }
 
 .solutions {
@@ -278,18 +282,24 @@ header .fa-seedling {
 .april-academy-content {
   display: none;
   margin: var(--blocks-margin);
-  height: 100%;
-  margin-bottom: 100px;
+  height: 100vh;
+  margin-bottom: var(--margin-bottom);
 }
 
-.april-academy-content > h2 {
+/* .april-academy-content > h2 {
   font-family: var(--ff-titles);
   color: var(--titles-clr);
+  margin-top: 15px;
+
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: clamp(2.6rem, 0.4565rem + 8.4058vw, 5.5rem);
   display: flex;
-  gap: 50px;
+  align-content: flex-start;
 }
+
+.april-academy-content .fa-seedling {
+  margin-top: 15px;
+} */
 
 .april-academy-content > h3 {
   color: var(--secondary-clr);

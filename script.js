@@ -75,40 +75,46 @@ new Chart(cty, {
 });
 
 function getFormPage() {
-  analyticsPage.style.display = "flex";
   homeContent.style.display = "none";
   homePageWelcome.style.display = "none";
-  logo.style.fontSize = "3rem";
-  header.style.display = "block";
   aprilAcademy.style.display = "none";
   solutionsPage.style.display = "none";
+
+  logo.style.fontSize = "var(--ff-size-logo)";
+  header.style.display = "flex";
+  analyticsPage.style.display = "flex";
 }
 
 function getHomePage() {
   analyticsPage.style.display = "none";
-  homeContent.style.display = "block";
-  homePageWelcome.style.display = "block";
-  header.style.display = "block";
-  logo.style.fontSize = "1.5rem";
   aprilAcademy.style.display = "none";
   solutionsPage.style.display = "none";
+
+  homeContent.style.display = "block";
+  homePageWelcome.style.display = "block";
+  header.style.display = "flex";
+  logo.style.fontSize = "var(--ff-size-logo)";
 }
 function getSolutionsPage() {
   analyticsPage.style.display = "none";
   homeContent.style.display = "none";
   homePageWelcome.style.display = "none";
-  logo.style.fontSize = "3rem";
-  header.style.display = "block";
   aprilAcademy.style.display = "none";
+
+  logo.style.fontSize = "var(--ff-size-logo)";
+  header.style.display = "flex";
   solutionsPage.style.display = "flex";
 }
 
 function getAcademyPage() {
   homeContent.style.display = "none";
-  header.style.display = "none";
-  aprilAcademy.style.display = "block";
   analyticsPage.style.display = "none";
   solutionsPage.style.display = "none";
+  homePageWelcome.style.display = "none";
+
+  header.style.display = "flex";
+  aprilAcademy.style.display = "block";
+  logo.style.fontSize = "var(--ff-size-logo)";
 }
 
 function getStatement() {
