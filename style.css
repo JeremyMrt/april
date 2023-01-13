@@ -184,7 +184,8 @@ header .fa-seedling {
 }
 
 .form-start > h3,
-.analytics > h3 {
+.analytics > h3,
+.solutions > h3 {
   font-family: var(--ff-titles);
   font-weight: 700;
   font-size: 1.8rem;
@@ -218,20 +219,62 @@ header .fa-seedling {
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   justify-items: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .data-display > div {
   height: 150px;
   width: 100px;
-  background-color: #0a5f59;
+  background-color: #0a5f5949;
   color: white;
   align-content: center;
+  border-radius: 25px;
 }
 
 .last-data-added > ul > li {
   height: 50px;
   border-bottom: 2px solid var(--secondary-clr);
+}
+
+.solutions-landing-page {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  gap: 5vh;
+  margin: var(--blocks-margin);
+  margin-bottom: 100px;
+}
+
+.solutions {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.solutions-display {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.solutions-display > div {
+  border-radius: 20px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 250px;
+  height: 350px;
+  background-color: rgba(128, 128, 128, 0.308);
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
 }
 
 .april-academy-content {

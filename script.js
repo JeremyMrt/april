@@ -1,6 +1,7 @@
 const ctx = document.getElementById("weekly-data-chart");
 const cty = document.getElementById("yearly-data-chart");
 const analyticsPage = document.querySelector(".analytics-landing-page");
+const solutionsPage = document.querySelector(".solutions-landing-page");
 const homeContent = document.querySelector(".home-content");
 const homePageWelcome = document.querySelector(".home-page-welcome");
 const header = document.querySelector("header");
@@ -80,6 +81,7 @@ function getFormPage() {
   logo.style.fontSize = "3rem";
   header.style.display = "block";
   aprilAcademy.style.display = "none";
+  solutionsPage.style.display = "none";
 }
 
 function getHomePage() {
@@ -89,6 +91,16 @@ function getHomePage() {
   header.style.display = "block";
   logo.style.fontSize = "1.5rem";
   aprilAcademy.style.display = "none";
+  solutionsPage.style.display = "none";
+}
+function getSolutionsPage() {
+  analyticsPage.style.display = "none";
+  homeContent.style.display = "none";
+  homePageWelcome.style.display = "none";
+  logo.style.fontSize = "3rem";
+  header.style.display = "block";
+  aprilAcademy.style.display = "none";
+  solutionsPage.style.display = "flex";
 }
 
 function getAcademyPage() {
@@ -96,6 +108,7 @@ function getAcademyPage() {
   header.style.display = "none";
   aprilAcademy.style.display = "block";
   analyticsPage.style.display = "none";
+  solutionsPage.style.display = "none";
 }
 
 function getStatement() {
