@@ -129,11 +129,9 @@ header .fa-bell {
   margin-bottom: 3vmax;
 }
 
-.myChart {
-  width: 100%;
-  padding: 10px;
-  background-color: var(--secondary-clr);
-  border-radius: 10px;
+#myChart {
+  width: 60%;
+  margin: 0 auto;
 }
 
 .actualites > h2 {

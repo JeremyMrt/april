@@ -38,17 +38,18 @@
         const ctx = document.getElementById("myChart");
 
         new Chart(ctx, {
-          type: "bar",
+          type: "doughnut",
           data: {
             labels: ["Energie", "Transport", "Alimentation", "Déchets"],
             datasets: [
               {
                 label: "CO2",
                 data: [12, 19, 3, 5],
-                borderWidth: 2,
                 borderColor: "#fffcf1",
-                backgroundColor: "#F6D78B",
-                color: "white",
+                backgroundColor: ["#A9AEFF", "#C6D0BC", "#F6D78B", "#E08183"],
+                hoverOffset: 5,
+                borderRadius: 9,
+                cutout: 50,
               },
             ],
           },
@@ -56,6 +57,12 @@
             scales: {
               y: {
                 beginAtZero: true,
+                display: false,
+              },
+            },
+            plugins: {
+              legend: {
+                display: false,
               },
             },
           },
