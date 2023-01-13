@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* END OF RESET */
+@font-face {
+  font-family: "averta_demo_pe_cutted_demoRg";
+  src: url("fonts/avertademopecutteddemo-regular-webfont.woff2") format("woff2"),
+    url("fonts/avertademopecutteddemo-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "averta_demo_peextrabold";
+  src: url("fonts/avertademope-extrabold-webfont.woff2") format("woff2"),
+    url("fonts/avertademope-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --main-clr: #fffcf1;
+  --secondary-clr: rgb(10, 95, 89);
+  --third-clr: #fdcf6f;
+
+  --nav-width: 95%;
+
+  --ff-normal: "averta_demo_pe_cutted_demoRg", sans-serif;
+  --ff-titles: "verta_demo_peextrabold", sans-serif;
+}
+
+body {
+  background-color: var(--main-clr);
+  font-family: var(--ff-normal);
+}
+
+nav {
+  position: fixed;
+  bottom: 2vh;
+  left: calc((100% - var(--nav-width)) / 2);
+  width: var(--nav-width);
+  background-color: var(--secondary-clr);
+  padding: 15px 25px;
+  border-radius: 50px;
+}
+
+nav > ul {
+  width: 95%;
+  background-color: var(--secondary-clr);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  color: var(--third-clr);
+}
+
+header {
+  padding: 15px;
+  position: relative;
+}
+
+header > h1 {
+  font-family: var(--ff-titles);
+  color: var(--secondary-clr);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 2vmax;
+}
+
+header > h2 {
+  font-family: var(--ff-titles);
+  font-weight: 900;
+  font-size: 3.5rem;
+}
+
+header .fa-bell {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: var(--secondary-clr);
+}
