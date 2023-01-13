@@ -41,6 +41,7 @@ img {
   --secondary-clr: #c6d0bc;
   --third-clr: #f6d78b;
   --titles-clr: #0a5f59;
+  --clr-light: #c6d0bc6b;
 
   --nav-width: 95%;
 
@@ -57,7 +58,103 @@ body {
   font-family: var(--ff-normal);
 }
 
+/*Landing Page */
+.landing-page {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.landing-page > h1 {
+  margin-top: 15px;
+  font-family: var(--ff-titles);
+  color: var(--titles-clr);
+  font-weight: 700;
+  font-size: clamp(2rem, 0.8913rem + 4.3478vw, 3.5rem);
+}
+
+.landing-page > h2 {
+  padding-left: 3px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.landing-page > p {
+  color: var(--titles-clr);
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+.first-name {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--clr-light);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  color: var(--titles-clr);
+  height: 70px;
+}
+
+input[type="text"] {
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: calc(var(--clr-light) - var(--clr-light));
+  font-weight: bolder;
+  font-size: 1.7rem;
+}
+
+.first-name:focus-within {
+  outline: 2px solid var(--third-clr);
+}
+
+.cta-account button {
+  appearance: none;
+  width: 220px;
+  padding: 15px 35px;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--titles-clr);
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.cta-account button:hover {
+  filter: brightness(110%);
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid var(--titles-clr);
+  animation: animated-cursor 1000ms steps(29, end) infinite;
+  padding-right: 0.08em;
+}
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: var(--color-font-titles);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 nav {
+  display: none;
   position: fixed;
   bottom: 2vh;
   left: calc((100% - var(--nav-width)) / 2);
@@ -78,9 +175,9 @@ nav > ul {
 }
 
 header {
+  display: none;
   margin: var(--blocks-margin);
   position: relative;
-  display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -101,6 +198,10 @@ header > h2 {
 
 header .fa-seedling {
   color: var(--titles-clr);
+}
+
+.home-content {
+  display: none;
 }
 
 .home-recap,

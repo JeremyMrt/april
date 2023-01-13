@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.1/lottie.min.js"></script>
     <script src="script.js" defer></script>
     <title>April</title>
   </head>
@@ -37,6 +38,47 @@
       <h2 class="home-page-welcome">Bonjour,<br />Jérémy</h2>
       <h1><i class="fa-solid fa-seedling"></i>April</h1>
     </header>
+
+    <div class="landing-page">
+      <h1><i class="fa-solid fa-seedling"></i>April</h1>
+      <div class="landing-animation-container">
+        <div id="landing-animation">
+          <script>
+            var animation = bodymovin.loadAnimation({
+              container: document.getElementById("landing-animation"),
+              path: "assets/bicycle.json ",
+              render: "svg",
+              loop: true,
+              autplay: true,
+              name: "girl on bicycle",
+            });
+          </script>
+        </div>
+      </div>
+      <h2>Suivez et diminuez vos émissions <strong>carbone</strong></h2>
+      <p>
+        Construisons<br />
+        <span
+          class="txt-rotate"
+          data-period="2000"
+          data-rotate='["le monde", "demain", "le futur", "ensemble"]'
+        ></span>
+      </p>
+      <form action="" method="" class="sign-up-form">
+        <div class="first-name">
+          <label for="first-name">Prénom</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            placeholder="Jean"
+            required
+            title="On n'a besoin que de ça, promis!"
+          />
+        </div>
+        <div class="cta-account"><button>C'est parti !</button></div>
+      </form>
+    </div>
 
     <div class="home-content">
       <section class="home-recap">
