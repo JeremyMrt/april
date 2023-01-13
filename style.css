@@ -144,7 +144,8 @@ input[type="text"] {
 }
 
 .cta-account button:hover {
-  filter: brightness(110%);
+  filter: brightness(120%);
+  cursor: pointer;
 }
 
 .txt-rotate > .wrap {
