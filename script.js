@@ -1,13 +1,44 @@
 const ctx = document.getElementById("weekly-data-chart");
 const cty = document.getElementById("yearly-data-chart");
+const landingPage = document.querySelector(".landing-page");
 const analyticsPage = document.querySelector(".analytics-landing-page");
 const solutionsPage = document.querySelector(".solutions-landing-page");
 const homeContent = document.querySelector(".home-content");
 const homePageWelcome = document.querySelector(".home-page-welcome");
+const nameplate = document.getElementById("nameplate");
 const header = document.querySelector("header");
 const logo = document.querySelector("header > h1");
+const navBar = document.querySelector("nav");
 const statement = document.getElementById("statement");
 const aprilAcademy = document.querySelector(".april-academy-content");
+const form = document.querySelector("form");
+
+if (!localStorage.getItem("first-name")) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    var inputName = document.getElementById("first-name");
+    localStorage.setItem("first-name", inputName.value);
+
+    landingPage.style.display = "none";
+    homeContent.style.display = "block";
+    homePageWelcome.style.display = "block";
+    header.style.display = "flex";
+    navBar.style.display = "flex";
+    logo.style.fontSize = "var(--ff-size-logo)";
+
+    nameplate.textContent = inputName.value;
+  });
+} else {
+  landingPage.style.display = "none";
+  homeContent.style.display = "block";
+  homePageWelcome.style.display = "block";
+  header.style.display = "flex";
+  navBar.style.display = "flex";
+  logo.style.fontSize = "var(--ff-size-logo)";
+
+  nameplate.textContent = localStorage.getItem("first-name");
+}
 
 new Chart(ctx, {
   type: "doughnut",
