@@ -25,5 +25,50 @@
       <h2>Bonjour,<br />Jérémy</h2>
       <i class="fa-solid fa-bell"></i>
     </header>
+
+    <section class="home-recap">
+      <h2>Votre semaine en cours</h2>
+      <div class="myChart">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <script>
+        const ctx = document.getElementById("myChart");
+
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: ["Energie", "Transport", "Alimentation", "Déchets"],
+            datasets: [
+              {
+                label: "CO2",
+                data: [12, 19, 3, 5],
+                borderWidth: 2,
+                borderColor: "#fffcf1",
+                backgroundColor: "#F6D78B",
+                color: "white",
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      </script>
+    </section>
+
+    <section class="actualites">
+      <h2>
+        Actualités<br />
+        <em>par actu-environnement.com</em>
+      </h2>
+      <script src="https://www.actu-environnement.com/acces_distant_news/fil_js.php4?nbr_news=5&themes=&ttitre=16&ttexte=12&police=Arial&ct1=000000&ct2=228822&ct3=003333&ct4=006633&underlined=underline&image=true"></script>
+    </section>
   </body>
 </html>
