@@ -28,6 +28,7 @@ if (!localStorage.getItem("first-name")) {
     logo.style.fontSize = "var(--ff-size-logo)";
 
     nameplate.textContent = inputName.value;
+    location.reload();
   });
 } else {
   landingPage.style.display = "none";

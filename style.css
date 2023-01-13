@@ -124,11 +124,6 @@ input[type="text"] {
   font-size: 1.7rem;
 }
 
-.first-name:focus-within {
-  outline: 2px solid var(--third-clr);
-  border-radius: 10px;
-}
-
 .cta-account button {
   appearance: none;
   width: 220px;
@@ -396,21 +391,6 @@ header .fa-seedling {
   height: 100vh;
   margin-bottom: var(--margin-bottom);
 }
-
-/* .april-academy-content > h2 {
-  font-family: var(--ff-titles);
-  color: var(--titles-clr);
-  margin-top: 15px;
-
-  font-weight: 700;
-  font-size: clamp(2.6rem, 0.4565rem + 8.4058vw, 5.5rem);
-  display: flex;
-  align-content: flex-start;
-}
-
-.april-academy-content .fa-seedling {
-  margin-top: 15px;
-} */
 
 .april-academy-content > h3 {
   color: var(--secondary-clr);
