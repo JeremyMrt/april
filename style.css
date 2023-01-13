@@ -98,7 +98,6 @@ header > h1 {
   color: var(--titles-clr);
   font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 2vmax;
 }
 
 header > h2 {
@@ -107,18 +106,18 @@ header > h2 {
   font-size: 3.5rem;
 }
 
-header .fa-bell {
+header .fa-seedling {
   position: absolute;
   top: 0px;
-  right: 15px;
-  font-size: 1.5rem;
+  right: 0px;
+  font-size: 3rem;
   color: var(--titles-clr);
 }
 
 .home-recap,
-.actualites {
+.bilan-co2 {
   margin: var(--blocks-margin);
-  margin-top: 2rem;
+  margin-top: 3vmax;
 }
 
 .home-recap > h2 {
@@ -129,18 +128,28 @@ header .fa-bell {
   margin-bottom: 3vmax;
 }
 
-#myChart {
+#weekly-data-chart {
   width: 60%;
   margin: 0 auto;
 }
 
-.actualites > h2 {
+.bilan-co2 > h2 {
   font-family: var(--ff-titles);
   color: var(--titles-clr);
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-.actualites > h2 em {
-  font-size: 1rem;
+.progress-bar {
+  width: 90%;
+  background-color: rgba(128, 128, 128, 0.24);
+  margin-bottom: 3vmax;
+  border-radius: 20px;
+}
+
+#myprogress-bar {
+  width: 25%;
+  border-radius: 20px;
+  background-color: var(--secondary-clr);
+  height: 10px;
 }

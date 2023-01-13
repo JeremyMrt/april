@@ -16,66 +16,112 @@
       <ul>
         <li><i class="fa-solid fa-house"></i></li>
         <li><i class="fa-solid fa-chart-line"></i></li>
+        <li><i class="fa-solid fa-lightbulb"></i></li>
         <li><i class="fa-solid fa-graduation-cap"></i></li>
-        <li><i class="fa-solid fa-user"></i></li>
+        <li><i class="fa-solid fa-gear"></i></li>
       </ul>
     </nav>
     <header>
       <h1>April</h1>
       <h2>Bonjour,<br />Jérémy</h2>
-      <i class="fa-solid fa-bell"></i>
+      <i class="fa-solid fa-seedling"></i>
     </header>
 
-    <section class="home-recap">
-      <h2>Votre semaine en cours</h2>
-      <div class="myChart">
-        <canvas id="myChart"></canvas>
-      </div>
-
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-      <script>
-        const ctx = document.getElementById("myChart");
-
-        new Chart(ctx, {
-          type: "doughnut",
-          data: {
-            labels: ["Energie", "Transport", "Alimentation", "Déchets"],
-            datasets: [
-              {
-                label: "CO2",
-                data: [12, 19, 3, 5],
-                borderColor: "#fffcf1",
-                backgroundColor: ["#A9AEFF", "#C6D0BC", "#F6D78B", "#E08183"],
-                hoverOffset: 5,
-                borderRadius: 9,
-                cutout: 50,
+    <div class="home-content">
+      <section class="home-recap">
+        <h2>Objectif 2t</h2>
+        <div class="progress-bar">
+          <div id="myprogress-bar"></div>
+        </div>
+        <h2>Ta semaine en cours</h2>
+        <div class="weekly-data-chart">
+          <canvas id="weekly-data-chart"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          const ctx = document.getElementById("weekly-data-chart");
+          new Chart(ctx, {
+            type: "doughnut",
+            data: {
+              labels: ["Energie", "Transport", "Alimentation", "Déchets"],
+              datasets: [
+                {
+                  label: "CO2",
+                  data: [12, 19, 3, 5],
+                  borderColor: "#fffcf1",
+                  backgroundColor: ["#A9AEFF", "#C6D0BC", "#F6D78B", "#E08183"],
+                  hoverOffset: 5,
+                  borderRadius: 9,
+                  cutout: 50,
+                },
+              ],
+            },
+            options: {
+              scales: {
+                y: {
+                  display: false,
+                },
               },
-            ],
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true,
-                display: false,
+              plugins: {
+                legend: {
+                  display: false,
+                },
               },
             },
-            plugins: {
-              legend: {
-                display: false,
+          });
+        </script>
+      </section>
+      <section class="bilan-co2">
+        <h2>Tendance de l'année</h2>
+        <div class="yearly-data-chart">
+          <canvas id="yearly-data-chart"></canvas>
+        </div>
+        <script>
+          const cty = document.getElementById("yearly-data-chart");
+          new Chart(cty, {
+            type: "line",
+            data: {
+              labels: [
+                "Janvier",
+                "Février",
+                "Mars",
+                "Avril",
+                "Mai",
+                "Juin",
+                "Juillet",
+              ],
+              datasets: [
+                {
+                  label: "My First Dataset",
+                  data: [65, 59, 80, 81, 56, 55, 40],
+                  fill: false,
+                  borderColor: "#f6d78b",
+                  borderWidth: 7,
+                  tension: 0.1,
+                  pointHoverBorderWidth: 25,
+                  cubicInterpolationMode: "monotone",
+                },
+              ],
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  display: false,
+                },
+                x: {
+                  display: false,
+                },
+              },
+              plugins: {
+                legend: {
+                  display: false,
+                },
               },
             },
-          },
-        });
-      </script>
-    </section>
-
-    <section class="actualites">
-      <h2>
-        Actualités<br />
-        <em>par actu-environnement.com</em>
-      </h2>
-      <script src="https://www.actu-environnement.com/acces_distant_news/fil_js.php4?nbr_news=5&themes=&ttitre=16&ttexte=12&police=Arial&ct1=000000&ct2=228822&ct3=003333&ct4=006633&underlined=underline&image=true"></script>
-    </section>
+          });
+        </script>
+      </section>
+    </div>
   </body>
 </html>
