@@ -9,21 +9,25 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
     <title>April</title>
   </head>
   <body>
     <nav>
       <ul>
-        <li><i class="fa-solid fa-house"></i></li>
-        <li><i class="fa-solid fa-chart-line"></i></li>
+        <li><i class="fa-solid fa-house" onclick="getHomePage()"></i></li>
+        <li><i class="fa-solid fa-chart-line" onclick="getFormPage()"></i></li>
         <li><i class="fa-solid fa-lightbulb"></i></li>
-        <li><i class="fa-solid fa-graduation-cap"></i></li>
+        <li>
+          <i class="fa-solid fa-graduation-cap" onclick="getAcademyPage()"></i>
+        </li>
         <li><i class="fa-solid fa-gear"></i></li>
       </ul>
     </nav>
     <header>
       <h1>April</h1>
-      <h2>Bonjour,<br />Jérémy</h2>
+      <h2 class="home-page-welcome">Bonjour,<br />Jérémy</h2>
       <i class="fa-solid fa-seedling"></i>
     </header>
 
@@ -35,93 +39,78 @@
         </div>
         <h2>Ta semaine en cours</h2>
         <div class="weekly-data-chart">
-          <canvas id="weekly-data-chart"></canvas>
+          <p>15,542t</p>
+          <canvas id="weekly-data-chart" width="200" height="200"></canvas>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-          const ctx = document.getElementById("weekly-data-chart");
-          new Chart(ctx, {
-            type: "doughnut",
-            data: {
-              labels: ["Energie", "Transport", "Alimentation", "Déchets"],
-              datasets: [
-                {
-                  label: "CO2",
-                  data: [12, 19, 3, 5],
-                  borderColor: "#fffcf1",
-                  backgroundColor: ["#A9AEFF", "#C6D0BC", "#F6D78B", "#E08183"],
-                  hoverOffset: 5,
-                  borderRadius: 9,
-                  cutout: 50,
-                },
-              ],
-            },
-            options: {
-              scales: {
-                y: {
-                  display: false,
-                },
-              },
-              plugins: {
-                legend: {
-                  display: false,
-                },
-              },
-            },
-          });
-        </script>
       </section>
       <section class="bilan-co2">
         <h2>Tendance de l'année</h2>
         <div class="yearly-data-chart">
           <canvas id="yearly-data-chart"></canvas>
         </div>
-        <script>
-          const cty = document.getElementById("yearly-data-chart");
-          new Chart(cty, {
-            type: "line",
-            data: {
-              labels: [
-                "Janvier",
-                "Février",
-                "Mars",
-                "Avril",
-                "Mai",
-                "Juin",
-                "Juillet",
-              ],
-              datasets: [
-                {
-                  label: "My First Dataset",
-                  data: [65, 59, 80, 81, 56, 55, 40],
-                  fill: false,
-                  borderColor: "#f6d78b",
-                  borderWidth: 7,
-                  tension: 0.1,
-                  pointHoverBorderWidth: 25,
-                  cubicInterpolationMode: "monotone",
-                },
-              ],
-            },
-            options: {
-              scales: {
-                y: {
-                  beginAtZero: true,
-                  display: false,
-                },
-                x: {
-                  display: false,
-                },
-              },
-              plugins: {
-                legend: {
-                  display: false,
-                },
-              },
-            },
-          });
-        </script>
       </section>
+    </div>
+
+    <div class="analytics-landing-page">
+      <div class="analytics-header">
+        <div class="form-start">
+          <h3>Ajoute un élément</h3>
+          <button>+</button>
+        </div>
+        <p onclick="getStatement()">Pourquoi tout rentrer à la main ?</p>
+        <p id="statement">
+          Chez April, nous sommes convaincus qu'une gestion active et réfléchie
+          de nos émissions carbone est le seul moyen de comprendre l'enjeu à
+          venir. C'est donc la façon la plus rapide de voir comment les réduire
+          !<br />
+          Et puis cela va (un peu) dans le sens des Low Tech car nous ne sommes
+          reliés à aucune donnée tierce ni aucun Cloud.
+        </p>
+      </div>
+      <div class="analytics">
+        <h3>Analyse</h3>
+        <div class="data-display">
+          <div class="div">1</div>
+          <div class="div">2</div>
+          <div class="div">3</div>
+          <div class="div">4</div>
+          <div class="div">5</div>
+          <div class="div">6</div>
+          <div class="div">7</div>
+          <div class="div">8</div>
+          <div class="div">9</div>
+        </div>
+        <h3>Derniers ajouts</h3>
+        <div class="last-data-added">
+          <ul>
+            <li>Test1</li>
+            <li>Test2</li>
+            <li>Test3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="april-academy-content">
+      <h2>April Academy <i class="fa-solid fa-seedling"></i></h2>
+      <h3>
+        Tout savoir sur le climat grâce à une collection de ressources
+        disponibles sur internet.
+      </h3>
+      <div class="academy-grid">
+        <ul>
+          <li>Pourquoi et comment apprendre ?</li>
+
+          <li>Les biais cognitifs</li>
+          <li>Curiosité et empathie</li>
+          <li>Devoir de la science</li>
+
+          <li>Terre et climat</li>
+          <li>Historique du CO2</li>
+          <li>L'Homme et le climat</li>
+          <li>Et demain ?</li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
