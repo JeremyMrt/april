@@ -1,1 +1,1 @@
-# First iteration of Project Apil carbon management app
+# Project Apil, carbon emissions management app
